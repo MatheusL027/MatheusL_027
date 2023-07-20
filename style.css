@@ -64,10 +64,16 @@ margin-top: 8px;}
   left:0;
   transform: translateY(-50%);
   top: 50%;
+  animation: escurecer 0.3s;
 }
 .claro #switch button {
 right: 0;
 left: initial;
+animation: clarear 0.3s forwards;
+}
+#switch button:hover{
+outline: 8px solid var(--highlight-color);
+
 }
 #switch span{
   display: block;
@@ -137,4 +143,19 @@ font-size: 17px; }
 }
 
 }
- 
+@keyframes clarear {
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+ @keyframes escurecer{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
+ }
